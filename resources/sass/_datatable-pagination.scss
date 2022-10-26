@@ -1,0 +1,24 @@
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    &:hover {
+        color: #fff !important;
+        border: 0px;
+        border-radius: 10% !important;
+        padding: 0.5em 0.9em !important;
+        background: rgba(13, 110, 253, 1);
+    }
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #fff !important;
+    border: 0px;
+    border-radius: 10% !important;
+    padding: 0.5em 0.9em !important;
+    background: rgba(13, 110, 253, 1);
+    &:hover {
+        color: #fff !important;
+        border: 0px;
+        border-radius: 10% !important;
+        padding: 0.5em 0.9em !important;
+        background: rgba(13, 110, 253, 1);
+    }
+}
