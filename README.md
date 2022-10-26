@@ -13,7 +13,7 @@ Let's get started
 
 2. Install dependencies
     ```
-    cd laravel-inertia-vite-template
+    cd role-permission-template
     composer install
     npm install
     npm run dev
@@ -32,11 +32,11 @@ Let's get started
 5. Configure your database in .env
     ```
     DB_CONNECTION=mysql
-    DB_HOST=your_database_host
-    DB_PORT=your_database_port
-    DB_DATABASE=your_database_name
-    DB_USERNAME=your_database_user
-    DB_PASSWORD=your_database_password
+    DB_HOST=database_host
+    DB_PORT=database_port
+    DB_DATABASE=database_name
+    DB_USERNAME=database_user
+    DB_PASSWORD=database_password
     ```
 
 6. Run migrations and initial seeder
