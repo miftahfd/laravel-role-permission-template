@@ -26,7 +26,7 @@ class MenuNavigationController extends Controller
             'route_name' => $request->route_name ?? null
         ]);
 
-        return back();
+        return back()->with('flash', 'success|Success!|Create menu');
     }
 
     public function edit(MenuNavigation $menu_navigation) {
@@ -46,6 +46,6 @@ class MenuNavigationController extends Controller
             'route_name' => $request->route_name ?? null
         ]);
 
-        return redirect()->route('menu-navigations.index');
+        return redirect()->route('menu-navigations.index')->with('flash', 'success|Success!|Update menu');
     }
 }

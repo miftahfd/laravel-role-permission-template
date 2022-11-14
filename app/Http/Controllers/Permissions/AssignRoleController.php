@@ -20,7 +20,7 @@ class AssignRoleController extends Controller
         $user = User::find($request->user);
         $user->assignRole($request->roles);
 
-        return back()->with('success', "Roles has been asigned to the user $user->name");
+        return back()->with('flash', "success|Success!|Roles has been asigned to the user $user->name");
     }
 
     public function edit(User $user) {
@@ -34,6 +34,6 @@ class AssignRoleController extends Controller
     public function update(AssignRoleRequest $request, User $user) {
         $user->syncRoles($request->roles);
 
-        return redirect()->route('assign-roles.index')->with('success', 'The roles has been synced.');
+        return redirect()->route('assign-roles.index')->with('flash', 'success|Success!|The roles has been synced.');
     }
 }

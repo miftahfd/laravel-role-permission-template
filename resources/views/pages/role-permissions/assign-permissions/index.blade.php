@@ -18,9 +18,6 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            @if(session('success'))
-                <div class="alert alert-success">{{ session('success') }}</div>
-            @endif
             <div class="card mb-4">
                 <div class="card-header">Assign Role to Permission</div>
 

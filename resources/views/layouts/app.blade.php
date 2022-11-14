@@ -28,5 +28,15 @@
 </body>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<script>
+    @if(Session::has('flash'))
+        @php list($type, $title, $message) = explode('|', Session::get('flash')) @endphp
+        Swal.fire(
+            '{{$title}}',
+            '{{$message}}',
+            '{{$type}}'
+        )
+    @endif
+</script>
 @stack('scripts')
 </html>

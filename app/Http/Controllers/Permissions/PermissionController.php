@@ -21,7 +21,7 @@ class PermissionController extends Controller
             'guard_name' => 'web'
         ]);
 
-        return back();
+        return back()->with('flash', 'success|Success!|Create permission');
     }
 
     public function edit(Permission $permission) {
@@ -33,6 +33,6 @@ class PermissionController extends Controller
     public function update(PermissionRequest $request, Permission $permission) {
         $permission->update(['name' => $request->name]);
 
-        return redirect()->route('permissions.index');
+        return redirect()->route('permissions.index')->with('flash', 'success|Success!|Update permission');
     }
 }

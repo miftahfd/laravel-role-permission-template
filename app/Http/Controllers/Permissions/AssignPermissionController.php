@@ -19,7 +19,7 @@ class AssignPermissionController extends Controller
         $role = Role::find($request->role);
         $role->givePermissionTo($request->permissions);
 
-        return back()->with('success', "Permmissions has been asigned to the role $role->name");
+        return back()->with('flash', "success|Success!|Permmissions has been asigned to the role $role->name");
     }
 
     public function edit(Role $role) {
@@ -33,6 +33,6 @@ class AssignPermissionController extends Controller
     public function update(AssignPermissionRequest $request, Role $role) {
         $role->syncPermissions($request->permissions);
 
-        return redirect()->route('assign-permissions.index')->with('success', 'The permission has been synced.');
+        return redirect()->route('assign-permissions.index')->with('flash', 'success|Success!|The permission has been synced.');
     }
 }

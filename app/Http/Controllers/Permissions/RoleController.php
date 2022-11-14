@@ -21,7 +21,7 @@ class RoleController extends Controller
             'guard_name' => 'web'
         ]);
 
-        return back();
+        return back()->with('flash', 'success|Success!|Create role');
     }
 
     public function edit(Role $role) {
@@ -33,6 +33,6 @@ class RoleController extends Controller
     public function update(RoleRequest $request, Role $role) {
         $role->update(['name' => $request->name]);
 
-        return redirect()->route('roles.index');
+        return redirect()->route('roles.index')->with('flash', 'success|Success!|Update role');
     }
 }
